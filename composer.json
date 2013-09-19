@@ -1,6 +1,7 @@
 {
     "name": "vinelab/iTunes",
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Abed Halawi",
