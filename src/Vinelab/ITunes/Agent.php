@@ -238,6 +238,11 @@ class Agent {
         throw new ConfigurationException('Incomplete Configuration');
     }
 
+    public function cacheFor($minutes)
+    {
+        return $this->iTunesConfig['cache'] = $minutes;
+    }
+
     protected function emptyResults()
     {
         return array('resultsCount'=>0, 'results'=>[]);
