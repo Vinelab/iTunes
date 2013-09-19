@@ -12,13 +12,33 @@ class ITunesServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
+	 * Bootstrap the application events.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->package('vinelab/itunes');
+	}
+
+	/**
 	 * Register the service provider.
 	 *
 	 * @return void
 	 */
 	public function register()
 	{
-		//
+
+		$this->app->register('Vinelab\Http\HttpServiceProvider');
+		$this->app['vinelab.itunes'] = $this->app->share(function(){
+			return new Agent($this->app['config'], $this->app['cache'], $this->app['vinelab.httpclient']);
+		});
+
+		$this->app->booting(function() {
+
+			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader->alias('ITunes', 'Vinelab\ITunes\Facades\Agent');
+		});
 	}
 
 	/**
