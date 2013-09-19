@@ -1,3 +1,4 @@
+[![Build Status](https://www.travis-ci.org/Vinelab/iTunes.png)](https://www.travis-ci.org/Vinelab/iTunes)
 # Vinelab/iTunes
 
 > A helper class that communicates with the iTunes search+lookup API. Supports caching results, default caching duration is 60 min.
