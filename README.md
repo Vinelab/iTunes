@@ -4,7 +4,7 @@
 
 Installation
 ------------
-Using [composer](http://getcomposer.org) require the package [vinelab/iTunes](https://packagist.org/packages/vinelab/itunes).
+Using [composer](http://getcomposer.org) require the package [vinelab/itunes](https://packagist.org/packages/vinelab/itunes).
 
 Edit **app.php** and add ```'Vinelab\ITunes\ITunesServiceProvider'``` to the ```'providers'``` array.
 
