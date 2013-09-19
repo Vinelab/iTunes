@@ -1,6 +1,6 @@
 {
     "name": "vinelab/itunes",
-    "description": "",
+    "description": "iTunes API Library",
     "license": "MIT",
     "authors": [
         {
