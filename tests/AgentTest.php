@@ -42,7 +42,7 @@ class AgentTest extends TestCase {
         $this->mConfig->shouldReceive('get')->andReturn($this->defaultConfig);
         $agent = new Agent($this->mConfig, $this->mCache);
 
-        $searchRequest = $agent->request('search', ['term'=>'abou ali']);
+        $searchRequest = $agent->request('search', array('term'=>'abou ali'));
 
         $this->assertEquals($searchRequest['url'], $this->defaultConfig['api']['url'].$this->defaultConfig['api']['search_uri']);
         $this->assertEquals($searchRequest['params'], array('term'=>'abou ali', 'limit'=>50));
