@@ -245,7 +245,7 @@ class Agent {
 
     protected function emptyResults()
     {
-        return array('resultsCount'=>0, 'results'=>[]);
+        return array('resultsCount'=>0, 'results'=>array());
     }
 
     /**
