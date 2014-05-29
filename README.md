@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Vinelab/iTunes.svg?branch=0.1.2)](https://travis-ci.org/Vinelab/iTunes)
 
-[!Codeship Build Status](https://www.codeship.io/projects/15d369d0-c97c-0131-3637-5a369f970263/status)
+![Codeship Build Status](https://www.codeship.io/projects/15d369d0-c97c-0131-3637-5a369f970263/status)
 
 > A helper class that communicates with the iTunes search+lookup API. Supports caching results, default caching duration is 60 min.
 
