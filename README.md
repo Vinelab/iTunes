@@ -1,21 +1,35 @@
-# Vinelab/iTunes
-
 [![Build Status](https://travis-ci.org/Vinelab/iTunes.svg?branch=0.1.2)](https://travis-ci.org/Vinelab/iTunes)
 
-![Codeship Build Status](https://www.codeship.io/projects/15d369d0-c97c-0131-3637-5a369f970263/status)
+[![Dependency Status](https://www.versioneye.com/user/projects/53efc98013bb065c3300049a/badge.svg?style=flat)](https://www.versioneye.com/user/projects/53efc98013bb065c3300049a)
 
-> A helper class that communicates with the iTunes search+lookup API. Supports caching results, default caching duration is 60 min.
+# Vinelab/iTunes
+A simple yet full-fledged iTunes API client with caching support.
 
-Installation
-------------
-Using [composer](http://getcomposer.org) require the package [vinelab/itunes](https://packagist.org/packages/vinelab/itunes).
+## Installation
 
-Edit **app.php** and add ```'Vinelab\ITunes\ITunesServiceProvider'``` to the ```'providers'``` array.
+### Composer
 
-It will automatically alias itself as ITunes which can be used as a Facade class.
+- `"vinelab/itunes": "dev-master"` or refer to [vinelab/itunes on packagist.org](https://packagist.org/packages/vinelab/itunes)
 
-Usage
------
+```php
+// change this to point correctly according
+// to your folder structure.
+require './vendor/autoload.php';
+
+use Vinelab\ITunes\Agent as iTunes;
+
+$iTunes = new iTunes;
+
+$response = $iTunes->search('Porcupine Tree')); // The original iTunes response
+```
+
+### Laravel
+
+Edit **app.php** and add `'Vinelab\ITunes\ITunesServiceProvider'` to the `'providers'` array.
+
+It will automatically alias itself as `ITunes` which can be used as a Facade class.
+
+## Usage
 
 ### Search
 
@@ -84,24 +98,3 @@ Usage
     ITunes::cacheFor(0);
     ITunes::search('Hallelujah'); // won't be cached
 ```
-
-## MIT License
-Copyright (c) 2013 Vinelab FZ LLC
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
