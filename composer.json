@@ -16,7 +16,7 @@
         "vinelab/http": "0.1.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "3.7.x",
+        "phpunit/phpunit": "4.2.*",
         "mockery/mockery": "dev-master"
     },
     "autoload": {
