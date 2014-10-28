@@ -1,7 +1,7 @@
 <?php namespace Vinelab\ITunes;
 
 use Illuminate\Config\Repository;
-use Illuminate\Cache\CacheManager;
+use Illuminate\Cache\CacheManager as Cache;
 use Vinelab\Http\Client as HttpClient;
 
 use Vinelab\ITunes\Exceptions\ConfigurationException;
