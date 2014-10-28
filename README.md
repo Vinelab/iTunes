@@ -2,6 +2,8 @@
 
 [![Dependency Status](https://www.versioneye.com/user/projects/53efc98013bb065c3300049a/badge.svg?style=flat)](https://www.versioneye.com/user/projects/53efc98013bb065c3300049a)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/336d059a-e325-4d38-bf41-2dfe7be45fed/big.png)](https://insight.sensiolabs.com/projects/336d059a-e325-4d38-bf41-2dfe7be45fed)
+
 # Vinelab/iTunes
 A simple yet full-fledged iTunes API client with caching support.
 
