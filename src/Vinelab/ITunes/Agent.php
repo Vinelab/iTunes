@@ -1,7 +1,7 @@
 <?php namespace Vinelab\ITunes;
 
 use Illuminate\Config\Repository;
-use Illuminate\Cache\CacheManager as Cache;
+use Illuminate\Cache\CacheManager;
 use Vinelab\Http\Client as HttpClient;
 
 use Vinelab\ITunes\Exceptions\ConfigurationException;
@@ -50,7 +50,7 @@ class Agent {
     {
 
         $this->_Config = $config ?: new Repository;
-        $this->_Cache = $cacheManager ?: new Cache;
+        $this->_Cache = $cacheManager ?: new CacheManager;
         $this->_Http = $http;
 
         // load library configuration
