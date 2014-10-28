@@ -161,7 +161,7 @@ class Agent {
         {
             $params = array();
 
-            if (strpos($method, 'InRegion') !== false and isset($arguments[1]))
+            if (strpos($method, 'InRegion') !== false && isset($arguments[1]))
             {
                 // performing regional search
                 list($region, $term) = $arguments;
@@ -179,7 +179,7 @@ class Agent {
 
             $params['media'] = $media;
 
-            if (count($arguments) > 1 and is_array($arguments[count($arguments)-1]))
+            if (count($arguments) > 1 && is_array($arguments[count($arguments)-1]))
             {
                 $params = array_merge($arguments[count($arguments)-1], $params);
             }
@@ -203,8 +203,8 @@ class Agent {
         if (isset($this->iTunesConfig['api']))
         {
             if (
-                isset($this->iTunesConfig['api']['url']) and
-                isset($this->iTunesConfig['api']['search_uri']) and
+                isset($this->iTunesConfig['api']['url']) &&
+                isset($this->iTunesConfig['api']['search_uri']) &&
                 isset($this->iTunesConfig['api']['lookup_uri'])
             ) {
 
