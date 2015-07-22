@@ -12,16 +12,6 @@ class ITunesServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->package('vinelab/itunes');
-	}
-
-	/**
 	 * Register the service provider.
 	 *
 	 * @return void
