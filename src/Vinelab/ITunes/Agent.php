@@ -54,7 +54,7 @@ class Agent {
         $this->_Http = $http;
 
         // load library configuration
-        $this->iTunesConfig = $this->_Config->get('itunes::itunes');
+        $this->iTunesConfig = $this->_Config->get('itunes');
 
         // Set the default cache duration (overridden by config if found)
         if (!isset($this->iTunesConfig['cache'])) $this->iTunesConfig['cache'] = $this->defaultCacheDuration;
