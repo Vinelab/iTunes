@@ -110,4 +110,15 @@ class LaravelAgent extends Agent
     {
         return sprintf('%s:%s:%s', $this->cachePrefix, $type, md5(http_build_query($params)));
     }
+
+    /**
+     * Load the configuration parameters.
+     */
+    protected function loadConfig()
+    {
+        parent::loadConfig();
+
+        // merge overriding with user-specified configuration.
+        $this->iTunesConfig = array_merge($this->iTunesConfig, $this->config->get('itunes'));
+    }
 }

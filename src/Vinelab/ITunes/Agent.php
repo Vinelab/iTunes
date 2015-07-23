@@ -235,7 +235,5 @@ class Agent
     {
         // load the detaulf configuration.
         $this->iTunesConfig = (array) require_once __DIR__.'/../../config/itunes.php';
-        // merge overriding with user-specified configuration.
-        $this->iTunesConfig = array_merge($this->iTunesConfig, $this->config->get('itunes'));
     }
 }
