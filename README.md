@@ -4,8 +4,8 @@
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/336d059a-e325-4d38-bf41-2dfe7be45fed/big.png)](https://insight.sensiolabs.com/projects/336d059a-e325-4d38-bf41-2dfe7be45fed)
 
-# Vinelab/iTunes
-A simple yet full-fledged iTunes API client with caching support.
+# iTunes
+A simple yet full-fledged iTunes API client with caching capabilities.
 
 ## Installation
 
@@ -20,16 +20,20 @@ require './vendor/autoload.php';
 
 use Vinelab\ITunes\Agent as iTunes;
 
-$iTunes = new iTunes;
+$iTunes = new iTunes();
 
 $response = $iTunes->search('Porcupine Tree')); // The original iTunes response
+
+$json = json_encode($response);
 ```
 
 ### Laravel
 
-Edit **app.php** and add `'Vinelab\ITunes\ITunesServiceProvider'` to the `'providers'` array.
-
+- Edit **app.php** and add `'Vinelab\ITunes\ITunesServiceProvider'` to the `'providers'` array.
 It will automatically alias itself as `ITunes` which can be used as a Facade class.
+- Run `php artisan vendor:publish` to publish the config file.
+
+This library supports Laravel 4 and Laravel 5.x, for installation in L4 use version 1.1.x.
 
 ## Usage
 
@@ -56,14 +60,15 @@ It will automatically alias itself as `ITunes` which can be used as a Facade cla
 
     ITunes::tvShow('Sex and The City');
 
-    /**
-     * Search a specific region
-     *
-     * Add InRegion for any kind of media search
-     */
+```
+
+#### In Region
+You can search in a specific region by siply suffixing any media search method name with `InRegion`
+
+```php
     ITunes::musicInRegion('LB', 'Myriam Fares');
 
-
+    ITunes::musicVideoInRegion('US', 'Immolation');
 ```
 
 ### Lookup
