@@ -70,7 +70,7 @@ class LaravelAgent extends Agent
         if ($this->cache->has($cacheKey)) {
             return $this->cache->get($cacheKey);
         } else {
-            return $this->cache->remember($cacheKey, $cacheDuration, function () {
+            return $this->cache->remember($cacheKey, $cacheDuration, function () use($term, $params) {
                 return json_encode(parent::search($term, $params));
             });
         }
@@ -92,7 +92,7 @@ class LaravelAgent extends Agent
         if ($this->cache->has($cacheKey)) {
             return $this->cache->get($cacheKey);
         } else {
-            return $this->cache->remember($cacheKey, $cacheDuration, function () {
+            return $this->cache->remember($cacheKey, $cacheDuration, function () use($id, $value, $params) {
                 return json_encode(parent::lookup($id, $value, $params));
             });
         }
