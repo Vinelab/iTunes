@@ -10,7 +10,7 @@ return array(
 
         'search_uri' => '/search',
 
-        'lookup_uri' => '/lookup'
+        'lookup_uri' => '/lookup',
     ),
 
     'limit' => '50', // 200 max
@@ -19,6 +19,6 @@ return array(
 
     'explicit' => 'Yes', // or No
 
-    'cache' => 60 // in minutes
+    'cache' => 60, // in minutes
 
 );
